@@ -1,14 +1,18 @@
 // hattenkadai 1
 #include <stdio.h>
-#include <math.h>
-int main(){
-  int i = 0;
-  double arctan1 = 0;
-  while(i < 10){
-    arctan1 += pow(-1,i) / (i*2 + 1);
-    if(i % 100 == 0){
-      printf("pi = %f\n", arctan1 * 4);
-    }
-    i++;
+#include <stdlib.h>
+
+int main(void) {
+  int i;
+  int fact= 1;
+
+  /* ネイピア数 */
+  double napier = 1.0;
+
+  for(i=1;i<10;i++){
+    fact *= i;
+    napier += 1.0 / fact;
   }
+  printf("e = %f\n", napier);
+  return 0;
 }
